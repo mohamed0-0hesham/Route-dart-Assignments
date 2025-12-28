@@ -1,12 +1,14 @@
-import 'dart:ffi';
 import 'dart:io';
 
 void main(List<String> arguments) {
-  // print(calculateSum(10));
-  // calculateNumberSum();
-  // getNOddNumber();
-  //   getFactorial();
+  print(calculateSum(10));
+  calculateNumberSum();
+  getNOddNumber();
+  printNumbersType();
+    getFactorial();
   getReversedInteger();
+  displayDivisibleBy5And6();
+    printIsPrime();
 }
 
 int getNumFromUser() {
@@ -124,14 +126,37 @@ void getReversedInteger() {
     }
   }
   int reversedInteger = 0;
-  int size = read.length;
-  print("size = $size");
   for (int i = 0; i < read.length; i++) {
     int n = number % 10;
-    number = ((number - n) / 10) as int;
-    print("n = $number");
+    number = ((number - n) / 10).toInt();
     reversedInteger = reversedInteger * 10 + n;
-    print("reversedInteger = $reversedInteger");
   }
   print(reversedInteger);
+}
+
+//7-  Write a program that displays all the numbers from 100 to 1,000, that are divisible
+// by 5 and 6. Numbers are separated by exactly one space like that: 5 10 20 100 30.
+
+void displayDivisibleBy5And6(){
+  for (int i = 100; i < 1000; i++) {
+    if (i % 5 == 0 && i % 6 == 0) {
+      stdout.write("$i ");
+    }
+  }
+}
+
+// 8-Write a program that takes integer as input and print yes if number is prime
+// number else print no
+
+void printIsPrime() {
+  print("Please enter an number ...");
+  int n = getNumFromUser();
+  bool isPrime = n == 0 || n == 1 ? false : true;
+  for (int i = 2; i < n; i++) {
+    if (n % i == 0 && i != n) {
+      isPrime = false;
+      break;
+    }
+  }
+  print("$isPrime");
 }
