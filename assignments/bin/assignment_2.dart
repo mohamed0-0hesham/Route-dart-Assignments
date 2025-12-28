@@ -5,10 +5,10 @@ void main(List<String> arguments) {
   calculateNumberSum();
   getNOddNumber();
   printNumbersType();
-    getFactorial();
+  getFactorial();
   getReversedInteger();
   displayDivisibleBy5And6();
-    printIsPrime();
+  printIsPrime();
 }
 
 int getNumFromUser() {
@@ -98,13 +98,13 @@ List getListFromUser(int listLength) {
 }
 
 //5- Write a program to find the factorial value of any number entered through the keyboard.
-void getFactorial(){
+void getFactorial() {
   print("Please enter an number ...");
   int n = getNumFromUser();
   int factorial = n == 0 ? 1 : n;
   if (n > 1) {
-    for (int i = n-1; i > 0; i--) {
-      factorial *=i;
+    for (int i = n - 1; i > 0; i--) {
+      factorial *= i;
     }
   }
   print(factorial);
@@ -137,7 +137,7 @@ void getReversedInteger() {
 //7-  Write a program that displays all the numbers from 100 to 1,000, that are divisible
 // by 5 and 6. Numbers are separated by exactly one space like that: 5 10 20 100 30.
 
-void displayDivisibleBy5And6(){
+void displayDivisibleBy5And6() {
   for (int i = 100; i < 1000; i++) {
     if (i % 5 == 0 && i % 6 == 0) {
       stdout.write("$i ");
