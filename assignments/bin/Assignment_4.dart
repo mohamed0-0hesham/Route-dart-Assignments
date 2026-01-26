@@ -11,6 +11,11 @@ void main() {
   distinctNumbers();
 }
 
+//1 - Write a program to test if an array contains a specific value if it is in the array print Yes if it’s not
+// print no
+// for example
+// input [ 8, 0, 1, 5 ] 0 output "Yes"
+// input [ 8, 0, 1, 5 ] 2 output "No"
 void containsValue(List<int> arr, int value) {
   bool found = false;
 
@@ -24,7 +29,8 @@ void containsValue(List<int> arr, int value) {
   print(found ? "Yes" : "No");
 }
 
-// 2) Calculate average of array elements
+// 2 - Write a program to calculate the average value of array elements
+// for example input [ 1, 9, 0, 5, 4, 2 ] output
 void calculateAverage(List<int> arr) {
   int sum = 0;
 
@@ -36,7 +42,8 @@ void calculateAverage(List<int> arr) {
   print(average);
 }
 
-// 3) Find second smallest element
+// 3) Write a program to find the second smallest element in an array
+// for example input [ 1, 9, 0, 5, 4, 2 ] output 1
 void secondSmallest(List<int> arr) {
   int smallest = arr[0];
   int secondSmallest = arr[0];
